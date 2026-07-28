@@ -1,0 +1,139 @@
+{
+ "updated": "2026-07-28T16:31:18Z",
+ "six49": {
+  "draws": [
+   {
+    "date": "2026-07-25",
+    "drawNbr": 4436,
+    "numbers": [
+     1,
+     8,
+     9,
+     24,
+     36,
+     37
+    ],
+    "bonus": 25,
+    "goldBallTicket": "92413193-01",
+    "goldBallDrawn": false
+   },
+   {
+    "date": "2026-07-22",
+    "drawNbr": 4435,
+    "numbers": [
+     9,
+     25,
+     29,
+     30,
+     33,
+     44
+    ],
+    "bonus": 10,
+    "goldBallTicket": "73501910-01",
+    "goldBallDrawn": false
+   },
+   {
+    "date": "2026-07-18",
+    "drawNbr": 4434,
+    "numbers": [
+     15,
+     27,
+     29,
+     33,
+     46,
+     49
+    ],
+    "bonus": 21,
+    "goldBallTicket": "47341641-01",
+    "goldBallDrawn": false
+   },
+   {
+    "date": "2026-07-15",
+    "drawNbr": 4433,
+    "numbers": [
+     12,
+     15,
+     17,
+     21,
+     28,
+     38
+    ],
+    "bonus": 41,
+    "goldBallTicket": "20726634-01",
+    "goldBallDrawn": false
+   }
+  ],
+  "next": {
+   "date": "2026-07-29",
+   "jackpot_cad": 5000000,
+   "goldBallJackpot_cad": 38000000,
+   "goldBallsRemaining": 1,
+   "whiteBallsRemaining": 15
+  }
+ },
+ "lmax": {
+  "draws": [
+   {
+    "date": "2026-07-24",
+    "drawNbr": 1255,
+    "numbers": [
+     5,
+     7,
+     8,
+     22,
+     30,
+     36,
+     37
+    ],
+    "bonus": 2
+   },
+   {
+    "date": "2026-07-21",
+    "drawNbr": 1254,
+    "numbers": [
+     1,
+     7,
+     18,
+     19,
+     38,
+     48,
+     52
+    ],
+    "bonus": 29
+   },
+   {
+    "date": "2026-07-17",
+    "drawNbr": 1253,
+    "numbers": [
+     8,
+     12,
+     13,
+     32,
+     40,
+     41,
+     52
+    ],
+    "bonus": 38
+   },
+   {
+    "date": "2026-07-14",
+    "drawNbr": 1252,
+    "numbers": [
+     3,
+     17,
+     24,
+     35,
+     37,
+     40,
+     41
+    ],
+    "bonus": 31
+   }
+  ],
+  "next": {
+   "date": "2026-07-28",
+   "jackpot_cad": 10000000,
+   "maxplusCount": 10
+  }
+ }
+}
