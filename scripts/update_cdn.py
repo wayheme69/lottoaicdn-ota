@@ -165,6 +165,33 @@ def fetch_wclc(game):
 
 # --------------------------- Assemblage ---------------------------
 
+DRAW_WD = {"six49": (2, 5), "lmax": (1, 4)}  # mer/sam · mar/ven (Python Mon=0)
+
+
+def backfill_drawnbr(game, rows):
+    """Mode dégradé WCLC (drawNbr=0) : extrapolation calendaire du n° officiel
+    (strictement séquentiel, 1 par date de tirage). L'app exige drawNbr>0 —
+    sans ce backfill, les tirages fallback n'atteignaient JAMAIS l'écran
+    (revue 29/07). Au retour de PlayNow, la ligne officielle (riche) réécrit
+    l'extrapolée — auto-guérison via le rich-guard de merge()."""
+    filled = 0
+    asc = sorted(rows, key=lambda x: x["date"])
+    last_d = last_n = None
+    for r in asc:
+        if r.get("drawNbr"):
+            last_d, last_n = date.fromisoformat(r["date"]), r["drawNbr"]
+        elif last_n:
+            d = date.fromisoformat(r["date"])
+            steps = sum(1 for i in range(1, (d - last_d).days + 1)
+                        if (last_d + timedelta(days=i)).weekday() in DRAW_WD[game])
+            r["drawNbr"] = last_n + max(steps, 1)
+            last_d, last_n = d, r["drawNbr"]
+            filled += 1
+    if filled:
+        print(f"  {game}: {filled} drawNbr EXTRAPOLÉS (mode dégradé WCLC)", file=sys.stderr)
+    return rows
+
+
 def merge(old_draws, fresh, cap=12):
     by = {}
     for r in old_draws or []:
@@ -195,7 +222,7 @@ for game in ("six49", "lmax"):
         draws = fetch_wclc(game)
         if not draws and not (old.get(game) or {}).get("draws"):
             raise SystemExit(f"{game}: toutes les sources ont échoué")
-    merged = merge((old.get(game) or {}).get("draws"), draws)
+    merged = backfill_drawnbr(game, merge((old.get(game) or {}).get("draws"), draws))
     if not merged:
         raise SystemExit(f"{game}: aucun tirage")
     # Sonde de fraîcheur (anti-Magayo) : 2 tirages/sem -> écart max normal 4 j (+ marge)
