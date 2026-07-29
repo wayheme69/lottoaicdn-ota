@@ -23,7 +23,7 @@
       <key>metadata</key>
       <dict>
         <key>bundle-identifier</key><string>com.digitalappllc.LOTTO-AI-CDN</string>
-        <key>bundle-version</key><string>2</string>
+        <key>bundle-version</key><string>3</string>
         <key>kind</key><string>software</string>
         <key>platform-identifier</key><string>com.apple.platform.iphoneos</string>
         <key>title</key><string>Lotto AI Canada</string>
