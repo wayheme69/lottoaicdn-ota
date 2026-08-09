@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-08T05:23:03Z",
+ "updated": "2026-08-09T02:48:56Z",
  "six49": {
   "draws": [
    {
@@ -109,11 +109,10 @@
    }
   ],
   "next": {
-   "date": "2026-08-08",
-   "jackpot_cad": 5000000,
-   "goldBallJackpot_cad": 44000000,
-   "goldBallsRemaining": 1,
-   "whiteBallsRemaining": 12
+   "date": "2026-08-12",
+   "jackpot_cad": 0,
+   "goldBallsRemaining": 0,
+   "whiteBallsRemaining": 0
   }
  },
  "lmax": {
