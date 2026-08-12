@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-12T03:08:18Z",
+ "updated": "2026-08-12T06:03:29Z",
  "six49": {
   "draws": [
    {
@@ -134,6 +134,20 @@
  "lmax": {
   "draws": [
    {
+    "date": "2026-08-11",
+    "drawNbr": 1260,
+    "numbers": [
+     9,
+     26,
+     35,
+     39,
+     43,
+     44,
+     47
+    ],
+    "bonus": 11
+   },
+   {
     "date": "2026-08-07",
     "drawNbr": 1259,
     "numbers": [
@@ -248,8 +262,8 @@
   ],
   "next": {
    "date": "2026-08-14",
-   "jackpot_cad": 0,
-   "maxplusCount": 0
+   "jackpot_cad": 40000000,
+   "maxplusCount": 40
   }
  }
 }
