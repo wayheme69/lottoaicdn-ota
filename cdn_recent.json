@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-19T03:27:06Z",
+ "updated": "2026-08-19T05:06:35Z",
  "six49": {
   "draws": [
    {
@@ -320,8 +320,8 @@
   ],
   "next": {
    "date": "2026-08-21",
-   "jackpot_cad": 0,
-   "maxplusCount": 0
+   "jackpot_cad": 55000000,
+   "maxplusCount": 55
   }
  }
 }
