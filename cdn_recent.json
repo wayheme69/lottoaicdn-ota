@@ -1,7 +1,22 @@
 {
- "updated": "2026-09-05T10:54:23Z",
+ "updated": "2026-09-06T05:03:52Z",
  "six49": {
   "draws": [
+   {
+    "date": "2026-09-05",
+    "drawNbr": 4448,
+    "numbers": [
+     5,
+     10,
+     17,
+     34,
+     42,
+     49
+    ],
+    "bonus": 44,
+    "goldBallTicket": "70298113-01",
+    "goldBallDrawn": false
+   },
    {
     "date": "2026-09-02",
     "drawNbr": 4447,
@@ -166,29 +181,14 @@
     "bonus": 10,
     "goldBallTicket": "72879686-01",
     "goldBallDrawn": false
-   },
-   {
-    "date": "2026-07-25",
-    "drawNbr": 4436,
-    "numbers": [
-     1,
-     8,
-     9,
-     24,
-     36,
-     37
-    ],
-    "bonus": 25,
-    "goldBallTicket": "92413193-01",
-    "goldBallDrawn": false
    }
   ],
   "next": {
-   "date": "2026-09-05",
+   "date": "2026-09-09",
    "jackpot_cad": 5000000,
-   "goldBallJackpot_cad": 24000000,
+   "goldBallJackpot_cad": 26000000,
    "goldBallsRemaining": 1,
-   "whiteBallsRemaining": 22
+   "whiteBallsRemaining": 21
   }
  },
  "lmax": {
