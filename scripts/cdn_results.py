@@ -82,6 +82,9 @@ def fetch(game, day):
             v = float(r.get("prizeAmount") or 0)
             if w > 0 and v > 0:
                 payouts[k] = v
+    # Lots pas encore publiés (tableau vide ou que des zéros) : null, l'app attend au lieu d'afficher « aucun gagnant »
+    if not j.get("gameBreakdown") or sum(winners.values()) == 0:
+        payouts, winners = None, None
     d = dict(date=day, draw=int(j["drawNbr"]), numbers=sorted(int(x) for x in j["drawNbrs"]), bonus=int(j["bonusNbr"]),
              payouts=payouts, winners=winners)
     if game == "six49":
@@ -125,7 +128,7 @@ def build(game, arch):
         ds = day.isoformat()
         recent = (today - day).days <= 8
         sched = day.weekday() in g["wd"]
-        if ds in have and not recent:
+        if ds in have and not recent and have[ds].get("payouts") is not None:
             out.append(have[ds])
         elif sched or recent:
             d = fetch(game, ds)
