@@ -13,13 +13,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch latest results
+      - name: Fetch latest results (app v3, cdn_recent.json)
         run: python3 scripts/update_cdn.py
+      - name: Fetch results with prizes (app v4, cdn_results.json + cdn_archive.json)
+        id: v4
+        continue-on-error: true
+        run: python3 scripts/cdn_results.py
       - name: Commit if changed
         run: |
           git config user.name "results-bot"
           git config user.email "actions@github.com"
-          git add cdn_recent.json
+          git add cdn_recent.json cdn_results.json cdn_archive.json
           if ! git diff --cached --quiet; then
             git commit -m "results: $(date -u +%Y-%m-%dT%H:%MZ)"
             git pull --rebase origin main
@@ -27,3 +31,6 @@ jobs:
           else
             echo "No change."
           fi
+      - name: Report v4 robot failure
+        if: steps.v4.outcome == 'failure'
+        run: exit 1
